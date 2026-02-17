@@ -62,6 +62,8 @@ tasks.register('proguard', proguard.gradle.ProGuardTask) {
 
     verbose
 
+    printmapping "libs/mapping.txt"
+
     outjars(layout.buildDirectory.file("libs/obfuscated.jar"))
 }
 
