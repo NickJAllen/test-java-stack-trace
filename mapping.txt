@@ -1,0 +1,12 @@
+org.example.App -> org.example.App:
+    void <init>() -> <init>
+    void main(java.lang.String[]) -> main
+org.example.TestJavaStackTrace -> org.example.a:
+    java.lang.Runnable RUNNABLE -> a
+    void dumpStackTrace() -> a
+    void middle(int) -> a
+    void crashFromNestedClassAndLambda() -> b
+    void lambda$static$0() -> c
+    void <clinit>() -> <clinit>
+org.example.TestJavaStackTrace$NestedClass -> org.example.b:
+    void <init>() -> <init>
