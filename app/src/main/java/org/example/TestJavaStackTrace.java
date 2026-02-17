@@ -40,7 +40,7 @@ public class TestJavaStackTrace {
 
     private static class NestedClass {
         public void innermost() {
-            throw new IllegalStateException("Inneermost");
+            throw new IllegalStateException("Innermost");
         }
     }
 }
