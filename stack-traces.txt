@@ -1,0 +1,36 @@
+Exception in thread "main" java.io.IOException: Outermost
+        at org.example.TestJavaStackTrace.outermost(TestJavaStackTrace.java:15)
+        at org.example.TestJavaStackTrace.dumpStackTrace(TestJavaStackTrace.java:7)
+        at org.example.App.main(App.java:10)
+Caused by: java.io.IOException: Middle exception
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:29)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:21)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:21)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:21)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:21)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:21)
+        at org.example.TestJavaStackTrace.outermost(TestJavaStackTrace.java:12)
+        ... 2 more
+Caused by: java.lang.IllegalStateException: Innermost
+        at org.example.TestJavaStackTrace$NestedClass.innermost(TestJavaStackTrace.java:43)
+        at org.example.TestJavaStackTrace.lambda$0(TestJavaStackTrace.java:38)
+        at org.example.TestJavaStackTrace.crashFromNestedClassAndLambda(TestJavaStackTrace.java:34)
+        at org.example.TestJavaStackTrace.middle(TestJavaStackTrace.java:26)
+        ... 8 more
+
+
+Obfuscated stack trace:
+
+Exception in thread "main" java.io.IOException: Outermost
+	at org.example.a.a(SourceFile:1015)
+	at org.example.App.main(SourceFile:10)
+Caused by: java.io.IOException: Middle exception
+	at org.example.a.a(SourceFile:29)
+	at org.example.a.a(SourceFile:7)
+	... 1 more
+Caused by: java.lang.IllegalStateException: Innermost
+	at org.example.a.c(SourceFile:2043)
+	at org.example.a.b(SourceFile:34)
+	at org.example.a.a(SourceFile:26)
+	... 2 more
+
