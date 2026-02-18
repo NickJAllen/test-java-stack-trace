@@ -1,0 +1,27 @@
+org.example.App -> org.example.App:
+# {"fileName":"App.java","id":"sourceFile"}
+    8:8:void <init>() -> <init>
+    10:11:void main(java.lang.String[]) -> main
+org.example.TestJavaStackTrace -> org.example.a:
+# {"fileName":"TestJavaStackTrace.java","id":"sourceFile"}
+    java.lang.Runnable RUNNABLE -> a
+    7:17:void dumpStackTrace() -> a
+    1012:1017:void outermost():12:17 -> a
+    1012:1017:void dumpStackTrace():7 -> a
+    1016:1021:void outermost():12:17 -> a
+    1016:1021:void dumpStackTrace():16 -> a
+    1014:1019:void outermost():12:17 -> a
+    1014:1019:void dumpStackTrace():14 -> a
+    1015:1020:void outermost():12:17 -> a
+    1015:1020:void dumpStackTrace():15 -> a
+    1017:1022:void outermost():12:17 -> a
+    1017:1022:void dumpStackTrace():17 -> a
+    20:31:void middle(int) -> a
+    34:35:void crashFromNestedClassAndLambda() -> b
+    38:43:void lambda$static$0() -> c
+    2043:2043:void org.example.TestJavaStackTrace$NestedClass.innermost():43:43 -> c
+    2043:2043:void lambda$static$0():43 -> c
+    37:37:void <clinit>() -> <clinit>
+org.example.TestJavaStackTrace$NestedClass -> org.example.b:
+# {"fileName":"TestJavaStackTrace.java","id":"sourceFile"}
+    41:41:void <init>() -> <init>

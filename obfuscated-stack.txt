@@ -1,12 +1,13 @@
-
 Exception in thread "main" java.io.IOException: Outermost
-	at org.example.a.a(Unknown Source)
-	at org.example.App.main(Unknown Source)
+	at org.example.a.a(SourceFile:1015)
+	at org.example.App.main(SourceFile:10)
 Caused by: java.io.IOException: Middle exception
-	at org.example.a.a(Unknown Source)
+	at org.example.a.a(SourceFile:29)
+	at org.example.a.a(SourceFile:7)
+	... 1 more
+Caused by: java.lang.IllegalStateException: Innermost
+	at org.example.a.c(SourceFile:2043)
+	at org.example.a.b(SourceFile:34)
+	at org.example.a.a(SourceFile:26)
 	... 2 more
-Caused by: java.lang.IllegalStateException: Inneermost
-	at org.example.a.c(Unknown Source)
-	at org.example.a.b(Unknown Source)
-	... 3 more
 

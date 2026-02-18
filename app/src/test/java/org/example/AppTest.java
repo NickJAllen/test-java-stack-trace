@@ -3,12 +3,19 @@
  */
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.io.IOException;
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+        try {
+            TestJavaStackTrace.dumpStackTrace();
+            fail("Should have thrown exception");
+        } catch (final IOException e) {
+            e.printStackTrace();
+        }
     }
 }

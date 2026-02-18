@@ -45,6 +45,11 @@ application {
     mainClass = 'org.example.App'
 }
 
+tasks.withType(JavaCompile) {
+    options.debug = true
+    options.debugOptions.debugLevel = "source,lines,vars"
+}
+
 tasks.register('proguard', proguard.gradle.ProGuardTask) {
     configuration file('proguard.pro')
 
