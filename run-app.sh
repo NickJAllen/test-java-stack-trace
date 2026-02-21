@@ -1,0 +1,1 @@
+java -cp app/build/libs/app.jar org.example.App
